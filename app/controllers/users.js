@@ -5,7 +5,19 @@ function UsersCtrl() {
 
     me.list = function () {};
     me.single = function () {};
-    me.create = function () {};
+
+    me.create = function (req, res) {
+        var user = {
+            id: 10,
+            name: req.body.name,
+            email: req.body.email
+        };
+
+        logger.info('UsersCtrl::create');
+
+        res.json(user);
+    };
+
     me.update = function () {};
     me.delete = function () {};
 }
