@@ -52,7 +52,16 @@ function UsersCtrl() {
         res.json(user);
     };
 
-    me.delete = function () {};
+    me.delete = function (req, res) {
+        var user = req.params.user;
+        logger.info('UsersCtrl::delete');
+
+        res.json({
+            id: user,
+            name: 'Wilk',
+            email: 'vincenzo@ibuildings.it'
+        });
+    };
 }
 
 module.exports = new UsersCtrl();
