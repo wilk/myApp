@@ -1,5 +1,8 @@
 {
   "express": {
     "port": 22334
+  },
+  "logger": {
+    "name": "myApp"
   }
 }

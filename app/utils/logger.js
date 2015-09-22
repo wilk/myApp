@@ -1,3 +1,4 @@
-var bunyan = require('bunyan');
+var bunyan = require('bunyan'),
+    config = require('config');
 
-module.exports = bunyan.createLogger({name: 'myApp'});
+module.exports = bunyan.createLogger(config.logger);
